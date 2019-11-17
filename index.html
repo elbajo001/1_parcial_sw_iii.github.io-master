@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./View/css/estilos.css">
+    <link rel = "icon" href = "./View/sources/logo_task.ico" type = "image/x-icon"> 
+    <title>Inicio Gestion de Tareas</title>
+</head>
+<body>
+  <div class="container" id="p1">
+    <div class="section">
+      <h1>Tareas de usuario</h1>
+      <form action="" method="">
+        <div class="form-group">
+          <label for="usr">Id de usuario</label>
+          <input id="byidentificacion" name="identificacion" type="text" class="form-control" placeholder="Id">        
+        </div>
+        <p id="demo"></p>
+        <button style="background-color: #007bff" id="btnStart" type="" class="btn btn-success" onclick="validarInput()">Comenzar</button>
+        <button style="background-color: #007bff" id="btnBuscarAgain" type="" class="btn btn-success">Buscar Nuevamente</button>
+      </form>
+      <div id="resultadoStart" class="form-group"></div>  
+    </div>
+  </div>
+  <div class="container" id="p2">
+      <p>Presentado por:<br>
+        <tr>&nbsp;&nbsp;Lino Alejandro Buesaquillo<br>
+        <tr>&nbsp;&nbsp;Juan Felipe Muñoz Ordoñez
+      </p>
+    </div>
+  
+  <script>
+    function validarInput(){
+      var x, text;
+      x = document.getElementById("byidentificacion").value;
+      if (isNaN(x) || x < 1) {
+        text = `<form style="margin-top:1em">
+          <div class="alert alert-danger" role="alert">
+              Id incorrecto. Por favor ingrese un id válido (número entero mayor a 0).<br>
+              Click en <strong><b>Buscar nuevamente</b><strong/>
+          </div> 
+        </form>`;
+        document.getElementById("demo").innerHTML = text;
+      }
+    }
+  </script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script type="text/javascript" src="View/Js/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="View/Js/funciones.js"></script>
+</html>
